@@ -10,6 +10,7 @@ class Speaker extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
     public function conferences(): BelongsToMany
     {
         return $this->belongsToMany(Conference::class);

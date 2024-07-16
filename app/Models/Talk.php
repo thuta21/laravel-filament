@@ -11,6 +11,8 @@ class Talk extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function speaker(): BelongsTo
     {
         return $this->belongsTo(Speaker::class);

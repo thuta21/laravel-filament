@@ -10,6 +10,8 @@ class Venue extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function conferences(): HasMany
     {
         return $this->hasMany(Conference::class);

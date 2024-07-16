@@ -11,6 +11,8 @@ class Conference extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function venue(): BelongsTo
     {
         return $this->belongsTo(Venue::class);
