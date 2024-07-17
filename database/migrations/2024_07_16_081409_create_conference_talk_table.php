@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('conference_talk', function (Blueprint $table) {
             $table->foreignId('conference_id');
             $table->foreignId('talk_id');
+
         });
     }
 
