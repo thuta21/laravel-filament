@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('speakers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('team_id');
             $table->text('avatar')->nullable();
             $table->string('email');
             $table->json('qualifications')->nullable();

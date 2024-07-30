@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Talk;
+use App\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Speaker;
@@ -25,6 +26,7 @@ class SpeakerFactory extends Factory
         $qualifications = $this->faker->randomElements(array_keys(Speaker::QUALIFICATIONS), $qualificationsCount);
         return [
             'name' => $this->faker->name(),
+            'team_id' => null,
             'email' => $this->faker->safeEmail(),
             'bio' => $this->faker->text(),
             'qualifications' => $qualifications,

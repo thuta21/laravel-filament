@@ -60,7 +60,7 @@ class Conference extends Model
             Section::make('Conference Details')
                 ->collapsible()
                 ->description('Provide some basic information about the conference.')
-                ->icon('heroicon-o-information-circle')
+                ->icon('heroicon-o-briefcase')
                 ->columns(2)
                 ->schema([
                     TextInput::make('name')
